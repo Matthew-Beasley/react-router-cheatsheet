@@ -30,7 +30,7 @@ const App = () => {
       This is the simplest form. You can't pass properties using this, just the component name 
       Note exact keyword preventing "/" from matching on others that start with "/" like 
       "/mycomponent" */}
-      <Route exact path="/" component={MyComponent} //Just pretending MyComponent is our home view here for "/" example
+      <Route exact path="/" component={MyComponent} /> {/*Just pretending MyComponent is our home view here for "/" example */}
 
       {/*By using "render" method properties can be passed to the component 
       the same as we would with a regular component without the Route*/}
@@ -41,7 +41,7 @@ const App = () => {
       <Route path="/mycomponent/:id" render={(props) => <MyComponent {...props} />} />
 
       {/* And finally we can pass both regular properties and props from the path at the same time */}
-      <Route path="/mycomponent/:id" render={(props) => <MyComponent someProperty={someProperty} {...props} />} 
+      <Route path="/mycomponent/:id" render={(props) => <MyComponent someProperty={someProperty} {...props} />} />
     </div>
   )
 }
